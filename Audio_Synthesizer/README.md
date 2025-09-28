@@ -1,10 +1,14 @@
-# Digital Audio Synthesizer Core (440 Hz Tone Generator)
+# Digital Audio Synthesizer 
 
 ## Project Overview
 
-This project implements a fundamental Digital Audio Synthesizer Core entirely in VHDL, synthesized onto an Altera Cyclone IV E Field-Programmable Gate Array (FPGA). The core functionality is to act as a Numerically Controlled Oscillator (NCO) to generate a precise, fixed-frequency square wave output that can be connected to an external speaker or amplifier circuit.
+This project implements a fundamental Digital Audio Synthesizer Core entirely in VHDL, a (440 Hz Tone Generator), synthesized onto an Altera Cyclone IV E Field-Programmable Gate Array (FPGA). The core functionality is to act as a Numerically Controlled Oscillator (NCO) to generate a precise, fixed-frequency square wave output that can be connected to an external speaker or amplifier circuit.
 
 This is the initial stage of a full synthesizer, demonstrating proficiency in digital signal generation and timing control using hardware description languages.
+
+## Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/L9zzHAPSjPM/0.jpg)](https://youtube.com/shorts/L9zzHAPSjPM)
 
 ## Key Features
 
