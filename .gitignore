@@ -83,3 +83,4 @@ KEEP: Block Symbol Files (BSF) and Block Diagram Files (BDF)
 KEEP: Any documentation/readme files
 !README
 !LICENSE
+!Waveform.vwf
