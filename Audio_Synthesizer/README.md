@@ -45,6 +45,3 @@ The project is designed for scalability and can be extended to a full instrument
 
 2. **Pulse Width Modulation (PWM):** Convert the output to a true PWM signal to control the duty cycle, thereby allowing for digital volume control (acting as a Voltage-Controlled Amplifier (VCA) equivalent).
 
-3. **Digital-to-Analog Conversion (DAC):** Integrate an R-2R resistor ladder or an external DAC to convert the digital output to a continuous analog audio signal for higher fidelity.
-
-4. **Envelope Generator (EG):** Implement ADSR (Attack, Decay, Sustain, Release) control to shape the volume over time, essential for realistic musical sounds.
