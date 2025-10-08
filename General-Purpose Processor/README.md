@@ -1,4 +1,4 @@
-# RISC-V FPGA Microcoded Function Unit
+# RISC-V FPGA General Purpose Processor Unit
 
 This repository contains the hardware design for a **microcoded function unit**, likely an **Arithmetic Logic Unit (ALU)**, implemented as part of a **RISC-V** processor on an **FPGA**.
 
@@ -8,7 +8,7 @@ This repository contains the hardware design for a **microcoded function unit**,
 
 * **Target Hardware:** **Intel Altera FPGA Board**.
 * **Design Tools:** **Quartus** (Used for synthesis, fitting, and programming).
-* **Purpose:** To provide a set of essential **arithmetic and logic operations** controlled by a unique **microcode word**.
+* **Purpose:** To provide a set of essential **arithmetic and logic operations** 
 
 ---
 
