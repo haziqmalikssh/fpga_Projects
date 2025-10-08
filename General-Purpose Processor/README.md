@@ -1,6 +1,6 @@
 # RISC-V FPGA General Purpose Processor Unit
 
-This repository contains the hardware design for a **microcoded function unit**, likely an **Arithmetic Logic Unit (ALU)**, implemented as part of a **RISC-V** processor on an **FPGA**.
+This repository contains the hardware design for a **microcoded function unit**, through an **Arithmetic Logic Unit (ALU)**, implemented as part of a **RISC-V** processor on an **FPGA**.
 
 ---
 
