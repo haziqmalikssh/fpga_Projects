@@ -33,6 +33,5 @@ The function unit is controlled by a microcode signal, defining the following co
 ## Build and Implementation
 
 1.  Open the project in **Quartus Prime**.
-2.  Compile and synthesize the HDL (likely Verilog/VHDL).
-3.  Generate the `.sof` **bitstream** file.
+2.  Compile and synthesize the VHDL. 
 4.  Program the Intel Altera FPGA board using the Quartus Programmer tool.
