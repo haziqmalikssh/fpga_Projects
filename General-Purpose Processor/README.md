@@ -11,6 +11,8 @@ This repository contains the hardware design for a **microcoded function unit**,
 * **Purpose:** To provide a set of **arithmetic and logic operations** 
 
 ---
+[![Watch the video](https://img.youtube.com/vi/7tgq4bVt8K4/hqdefault.jpg)](https://youtube.com/shorts/7tgq4bVt8K4)
+* **Note:Implementation done on different board from original for the demo video**.
 
 ## Microcode Specification
 
