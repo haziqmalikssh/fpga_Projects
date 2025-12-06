@@ -9,6 +9,7 @@ This repository contains the hardware design for a **microcoded function unit**,
 * **Target Hardware:** **Intel Altera FPGA Board**.
 * **Design Tools:** **Quartus** (Used for synthesis, implementation, and programming).
 * **Purpose:** To provide a set of **arithmetic and logic operations** 
+* **Based on this lab manual:https://www.ee.torontomu.ca/~courses/coe328/Lab6_Manual.pdf**
 
 ---
 [![Watch the video](https://img.youtube.com/vi/7tgq4bVt8K4/hqdefault.jpg)](https://youtube.com/shorts/7tgq4bVt8K4)
