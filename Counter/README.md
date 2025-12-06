@@ -18,4 +18,4 @@ A simple VHDL implementation of an auto-incrementing 4-digit decimal counter (00
 ## Demo
 [![Watch Demo](https://img.youtube.com/vi/xFDzwvmDq7Q/0.jpg)](https://youtube.com/shorts/xFDzwvmDq7Q)
 
-▶️ [Click to watch the counter in action](https://youtube.com/shorts/xFDzwvmDq7Q)
+[Click to watch the counter in action](https://youtube.com/shorts/xFDzwvmDq7Q)
