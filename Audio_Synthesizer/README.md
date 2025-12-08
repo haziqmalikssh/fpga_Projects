@@ -2,6 +2,10 @@
 
 A digital synthesizer with multiple waveforms, filter, envelope, and effects controlled by 4 buttons using a click-count system.
 
+## Demo
+
+[![Demo Video](https://img.youtube.com/vi/WbtO7lYJ_3s/0.jpg)](https://youtube.com/shorts/WbtO7lYJ_3s)
+
 ## How It Works
 
 **Click buttons to change settings, then press any button to play the configured sound.**
