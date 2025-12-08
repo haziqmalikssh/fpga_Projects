@@ -12,12 +12,12 @@ A digital synthesizer with multiple waveforms, filter, envelope, and effects con
 
 ### Button Controls
 
-| Button | Function | Options | LED |
-|--------|----------|---------|-----|
-| **KEY1** | Note Selection | C4→D4→E4→F4→G4→A4→B4→C5 (8 notes) | led1 |
+| Button | Function | Options |
+|--------|----------|---------|
+| **KEY1** | Note Selection | C4→D4→E4→F4→G4→A4→B4→C5 (8 notes) | 
 | **KEY2** | Waveform | Saw→Square→Triangle→Sine (4 types) | led2 |
-| **KEY3** | Filter Cutoff | Bright→Medium→Dark→Muffled (4 levels) | led3 |
-| **KEY4** | Effects | None→Vibrato→Slow Attack→Tremolo (4 modes) | led4 |
+| **KEY3** | Filter Cutoff | Bright→Medium→Dark→Muffled (4 levels) | 
+| **KEY4** | Effects | None→Vibrato→Slow Attack→Tremolo (4 modes) | 
 
 Each button cycles through its options on each click. LEDs indicate setting (ON when count ≥ 2 or 4).
 
