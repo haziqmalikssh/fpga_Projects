@@ -1,47 +1,53 @@
-# Digital Audio Synthesizer 
+# FPGA Audio Synthesizer
 
-## Project Overview
+A digital synthesizer with multiple waveforms, filter, envelope, and effects controlled by 4 buttons using a click-count system.
 
-This project implements a fundamental Digital Audio Synthesizer Core entirely in VHDL, a (440 Hz Tone Generator), synthesized onto an Altera Cyclone IV E Field-Programmable Gate Array (FPGA). The core functionality is to act as a Numerically Controlled Oscillator (NCO) to generate a precise, fixed-frequency square wave output that can be connected to an external speaker or amplifier circuit.
+## How It Works
 
-This is the initial stage of a full synthesizer, demonstrating proficiency in digital signal generation and timing control using hardware description languages.
+**Click buttons to change settings, then press any button to play the configured sound.**
 
-## Demo Video
+### Button Controls
 
-[![Demo Video](https://img.youtube.com/vi/L9zzHAPSjPM/0.jpg)](https://youtube.com/shorts/L9zzHAPSjPM)
+| Button | Function | Options | LED |
+|--------|----------|---------|-----|
+| **KEY1** | Note Selection | C4→D4→E4→F4→G4→A4→B4→C5 (8 notes) | led1 |
+| **KEY2** | Waveform | Saw→Square→Triangle→Sine (4 types) | led2 |
+| **KEY3** | Filter Cutoff | Bright→Medium→Dark→Muffled (4 levels) | led3 |
+| **KEY4** | Effects | None→Vibrato→Slow Attack→Tremolo (4 modes) | led4 |
 
-## Key Features
+Each button cycles through its options on each click. LEDs indicate setting (ON when count ≥ 2 or 4).
 
-* **Fixed-Frequency Tone Generation:** Generates a precise 440 Hz (A4 note) square wave, demonstrating fundamental digital frequency division.
-* **VHDL Implementation:** Logic implemented using concurrent and sequential VHDL processes, utilizing integer arithmetic for clock cycle counting.
-* **Clock Domain Management:** Utilizes a 50 MHz input clock (CLK) to accurately derive the target 440 Hz frequency signal.
-* **Fully Synthesizable:** Code is optimized for efficient resource utilization on the target FPGA fabric.
-* **High-Resolution Timing:** Achieves accurate audio frequency generation limited only by the master clock frequency.
+## Usage Example
 
-## Architecture and Implementation Details
+1. Click KEY1 twice → Select E4 note
+2. Click KEY2 once → Sawtooth waveform  
+3. Click KEY3 once → Bright filter
+4. Click KEY4 twice → Add vibrato
+5. Press and hold any button → Plays E4 with vibrato and smooth envelope
 
-The core logic uses a single counter, running on the 50 MHz system clock, to determine the duration of the high and low states of the square wave.
-
-The half-period count (N) is calculated as:
+## Architecture
 
 ```
-N = Clock Frequency / (2 × Tone Frequency) = 50,000,000 / (2 × 440) = 56,818 clock cycles
+Oscillator (DDS) → Filter (LPF) → Envelope (ADSR) → PWM Output
+                      ↓
+                    LFO (for effects)
 ```
 
-The VHDL counter increments every clock cycle. When the counter reaches 56,818, it resets to zero and toggles the `square` signal, thereby creating the 440 Hz square wave output.
+- **Oscillator**: 32-bit DDS generates precise frequencies
+- **Filter**: Variable low-pass filter for tone control
+- **Envelope**: ADSR (Attack-Decay-Sustain-Release) for smooth note shaping
+- **LFO**: 5Hz modulation for vibrato/tremolo effects
+- **Output**: 16-bit PWM to buzzer (pin 110)
 
-## Hardware and Pin Assignments
+## Pin Map
 
-| Component | Signal Name | Type | Target Pin | FPGA Board |
-|-----------|-------------|------|------------|------------|
-| System Clock (Input) | `clk` | `std_logic` | PIN_23 | Cyclone IV E: EP4CE6E22C8 |
-| Audio Output (Square Wave) | `pwm_out` | `std_logic` | PIN_43 | Cyclone IV E: EP4CE6E22C8 |
+| Signal | Pin | Signal | Pin |
+|--------|-----|--------|-----|
+| FPGA_CLK | 23 | KEY1 | 88 |
+| RESET | 25 | KEY2 | 89 |
+| beep | 110 | KEY3 | 90 |
+| led1 | 87 | KEY4 | 91 |
+| led2 | 86 | led3 | 85 |
+| led4 | 84 | - | - |
 
-## Next Steps and Future Expansion
-
-The project is designed for scalability and can be extended to a full instrument by adding the following modules:
-
-1. **Variable Frequency Control:** Implement external inputs (buttons/switches) to dynamically update the tone frequency, enabling multiple musical notes.
-
-2. **Pulse Width Modulation (PWM):** Convert the output to a true PWM signal to control the duty cycle, thereby allowing for digital volume control (acting as a Voltage-Controlled Amplifier (VCA) equivalent).
-
+All buttons and RESET are active-low. 50ms debounce on all inputs.
