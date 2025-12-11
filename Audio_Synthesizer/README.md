@@ -6,6 +6,8 @@ A digital synthesizer with multiple waveforms, filter, envelope, and effects con
 
 [![Demo Video](https://img.youtube.com/vi/WbtO7lYJ_3s/0.jpg)](https://youtube.com/shorts/WbtO7lYJ_3s)
 
+* Testing Speaker with melody https://youtube.com/shorts/KAXzrHohLJg 
+
 ## How It Works
 
 **Click buttons to change settings, then press any button to play the configured sound.**
